@@ -9,27 +9,19 @@
         <form method="POST">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInput" placeholder="brand">
-            <label for="floatingInput">Brand</label>
+            <label for="floatingInput">Nama Supplier</label>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInput" placeholder="brand">
-            <label for="floatingInput">Model</label>
+            <label for="floatingInput">Alamat</label>
           </div>
-          <div class="form-floating mb-3">
+          <!-- <div class="form-floating mb-3">
             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
               <option selected>Open this select menu</option>
               <option value="1">One</option>
             </select>
             <label for="floatingSelect">Supplier</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="brand">
-            <label for="floatingInput">Code</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="brand">
-            <label for="floatingInput">Year</label>
-          </div>
+          </div> -->
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
