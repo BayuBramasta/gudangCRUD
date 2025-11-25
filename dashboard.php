@@ -11,7 +11,7 @@
                 <div class="bg-success p-2 rounded">
                   <div class="inner">
                     <?php
-                      $gSupplier = mysqli_query($conn, "SELECT COUNT(id) AS total FROM tb_supplier");
+                      $gSupplier = mysqli_query($conn, "SELECT COUNT(id_supplier) AS total FROM tb_supplier");
                       $totalSupplier = mysqli_fetch_array($gSupplier); 
                     ?>
                     <h3 class="text-light"><?=$totalSupplier['total'] ?></h3>

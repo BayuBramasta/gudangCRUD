@@ -19,11 +19,11 @@
             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="supplier" required>
               <option value="" class="supplier" selected></option>
               <?php 
-                $gSupplier = mysqli_query($conn, "SELECT id , name FROM tb_supplier");
+                $gSupplier = mysqli_query($conn, "SELECT id_supplier , name FROM tb_supplier");
                 while($supplier = mysqli_fetch_array($gSupplier))
                 {
               ?>
-              <option value="<?=$supplier['id'] ?>"><?=$supplier['name'] ?></option>
+              <option value="<?=$supplier['id_supplier'] ?>"><?=$supplier['name'] ?></option>
               <?php }?>
             </select>
             <label for="floatingSelect">Supplier</label>

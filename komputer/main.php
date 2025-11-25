@@ -27,7 +27,7 @@
               <tbody>
                 <?php
                   $iteration = 0; 
-                  $get_komputer = mysqli_query($conn, "SELECT * FROM tb_komputer LEFT JOIN tb_supplier ON tb_komputer.supplier = tb_supplier.id;");
+                  $get_komputer = mysqli_query($conn, "SELECT * FROM tb_komputer LEFT JOIN tb_supplier ON tb_komputer.supplier = tb_supplier.id_supplier;");
                   if(mysqli_num_rows($get_komputer)<1)
                   {
                     echo "<tr><td colspan = '7' class='text-center' >Belum Ada Data</td></tr>";
@@ -41,7 +41,7 @@
                   <td><?=$komputer['model'] ?></td>
                   <td><?=$komputer['name'] ?></td>
                   <td><?=$komputer['year'] ?></td>
-                  <td><button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-brand="<?=$komputer['brand'] ?>" data-bs-model="<?=$komputer['model'] ?>" data-bs-supplier="<?=$komputer['name'] ?>" data-bs-supplierID="<?=$komputer['id'] ?>" data-bs-year="<?=$komputer['year'] ?>" data-bs-id="<?=$komputer['id_komputer'] ?>">Edit</button></td>
+                  <td><button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-brand="<?=$komputer['brand'] ?>" data-bs-model="<?=$komputer['model'] ?>" data-bs-supplier="<?=$komputer['name'] ?>" data-bs-supplierID="<?=$komputer['id_supplier'] ?>" data-bs-year="<?=$komputer['year'] ?>" data-bs-id="<?=$komputer['id_komputer'] ?>">Edit</button></td>
                   <td><a class="btn btn-danger btn-sm" href="komputer/del.php?id=<?=$komputer['id_komputer'] ?>"><b>Delete</b></a></td>
                 </tr>
                 <?php }?>
