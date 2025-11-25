@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tb_komputer` (
-  `id` int(11) NOT NULL,
+  `id_komputer` int(11) NOT NULL,
   `brand` varchar(100) NOT NULL,
   `model` varchar(255) NOT NULL,
   `supplier` int(11) NOT NULL,
@@ -43,8 +43,8 @@ CREATE TABLE `tb_komputer` (
 --
 
 CREATE TABLE `tb_supplier` (
-  `id` int(11) NOT NULL,
-  `supplier` varchar(100) NOT NULL,
+  `id_supplier` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -56,14 +56,14 @@ CREATE TABLE `tb_supplier` (
 -- Indexes for table `tb_komputer`
 --
 ALTER TABLE `tb_komputer`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_komputer`),
   ADD KEY `supplier` (`supplier`);
 
 --
 -- Indexes for table `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_supplier`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -73,13 +73,13 @@ ALTER TABLE `tb_supplier`
 -- AUTO_INCREMENT for table `tb_komputer`
 --
 ALTER TABLE `tb_komputer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_komputer` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -89,7 +89,7 @@ ALTER TABLE `tb_supplier`
 -- Constraints for table `tb_komputer`
 --
 ALTER TABLE `tb_komputer`
-  ADD CONSTRAINT `tb_komputer_ibfk_1` FOREIGN KEY (`supplier`) REFERENCES `tb_supplier` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tb_komputer_ibfk_1` FOREIGN KEY (`supplier`) REFERENCES `tb_supplier` (`id_supplier`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

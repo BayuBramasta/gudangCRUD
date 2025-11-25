@@ -37,10 +37,10 @@
                   <td><?=$iteration ?></td>
                   <td><?=$supplier['name'] ?></td>
                   <td><?=$supplier['address'] ?></td>
-                  <td><button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-supplier="<?=$supplier['name'] ?>" data-bs-address="<?=$supplier['address'] ?>" data-bs-id="<?=$supplier['id'] ?>">
+                  <td><button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-supplier="<?=$supplier['name'] ?>" data-bs-address="<?=$supplier['address'] ?>" data-bs-id="<?=$supplier['id_supplier'] ?>">
                   <b>Edit</b>
                 </button></td>
-                  <td><a class="btn btn-danger btn-sm" href="supplier/del.php?id=<?=$supplier['id'] ?>"><b>Delete</b></a></td>
+                  <td><a class="btn btn-danger btn-sm" href="supplier/del.php?id=<?=$supplier['id_supplier'] ?>"><b>Delete</b></a></td>
                 </tr>
                 <?php }?>
               </tbody>
